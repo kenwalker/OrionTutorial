@@ -9,19 +9,23 @@
 window.onload = function() {
 
     // create the plugin headers
+    //TODO Fix the JSON object below
     var headers = {
-        name: "Plugin Installer",
-        version: "1.0",
-        description: "This plugin provides a Navigator action to install a plugin."
+        name: /*NAME*/,
+        version: /*VERSION*/,
+        description: /*DESCRIPTION*/
     };
 
     // Create the provider based on the headers
-    var provider = new orion.PluginProvider(headers);
+    //TODO Pass your created header object
+    var provider = new orion.PluginProvider(/*HEADERS*/);
 
     // Define the properties for this service, the menu item will appear with the name and hover help
+    // When selected you can see that a URL is constructed to direct navigation to the settings page
+    //TODO Pick a name and tooltip for the menu item that will show up in the Navigator
     var serviceProperties = {
-        name: "Install plugin",
-        tooltip: 'Open the settings page ready to install this plugin',
+        name: /* MENUITEMNAME */,
+        tooltip: /* TOOLTIP */,
         contentType: ["text/html"],
         uriTemplate: "{OrionHome}/settings/settings.html#,category=plugins,installPlugin={OrionHome}{Location}"
     };
