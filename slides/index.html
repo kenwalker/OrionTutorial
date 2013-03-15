@@ -67,8 +67,10 @@
 						<li>Run the <code>Orion</code> executable</li>
 						<li>Wait for a bit...</li>
 						<li>Open up <a href="http://localhost:8080">http://localhost:8080</a></li>
-						<li>Create an account, email not required</li>
-						<li>You're ready to <code>code</code>!</li>
+						<li>Create an account named <b>"tutorial"</b> (email not required)</li>
+						<li>Either <a href="http://localhost:8080/git/git-repository.html#,cloneGitRepository=git://github.com/kenwalker/OrionTutorial.git">Clone the Tutorial from Github</a> or 
+						Get this Tutorial into Orion in an <b>"OrionTutorial"</b> folder</li>
+						<li>You're ready to <a href="http://localhost:8080/navigate/table.html#/file/tutorial/OrionTutorial/?depth=1">code</a>!</li>
 					</ul>
 					</section>
 					<section>
@@ -133,14 +135,24 @@
 						<li>Orion pages are designed to be 'extended' with plugins</li>
 						<li>Orion applications are NOT made up of plugins.</li>
 						<li>Plugins are isolated and secure against direct modification of the hosting page</li>
+						<li>See the <a href="http://localhost:8080/help/index.jsp?topic=%2Forg.eclipse.orion.doc.isv%2FWikiDoc%2FOrion%2FDocumentation%2FDeveloper_Guide%2FSimple_plugin_example%2FSimple-plugin-example.html&cp=1_0_2_0">Plugin Documentation</a></li>
 					</ul>
 				</section>
 
 				<section>
 					<h2>Your First Plugin</h2>
+					<p>
+						You're going to finish writing a plugin that will allow you to install a plugin right from the Navigator itself. Kind of meta but useful
+						during development.
+					</p>
 					<ul>
-						<li>You want to navigate into <code>OrionTutorial/exercises/exercise-1</code></a></li>
-						<li>Open the 
+						<li>Navigate into <a href="http://localhost:8080/navigate/table.html#/file/tutorial/OrionTutorial/exercises/exercise-1/?depth=1">Exercise 1</a></a></li>
+						<li>You'll leverage the <a href="http://localhost:8080/help/index.jsp?topic=%2Forg.eclipse.orion.doc.isv%2FWikiDoc%2FOrion%2FDocumentation%2FDeveloper_Guide%2FPlugging_into_the_navigator%2Forion-navigate-command.html&cp=1_0_8_1">orion.navigate.command</a> service</li>
+						<li>Edit the <a href="http://localhost:8080/edit/edit.html#/file/tutorial/OrionTutorial/exercises/exercise-1/plugin-installer.js">plugin-installer.js</a> file and fix the code near the TODOs</li>
+						<li>When you're done, you install the HTML part of that plugin on the <a href="http://localhost:8080/settings/settings.html#,category=plugins,installPlugin=http://localhost:8080/file/tutorial/OrionTutorial/exercises/exercise-1/plugin-installer.html">Settings Page</a></LI>
+						<li>Select plugin-installer.html in the <a href="http://localhost:8080/navigate/table.html#/file/tutorial/OrionTutorial/exercises/exercise-1/?depth=1">Exercise 1</a> directory</li>
+						<li>Then choose the menu item Action->(whatever name you gave your command)</li>
+						<li>The settings page should open with your filename filled in as the plugin to install</li>
 					</ul>
 				</section>
 
