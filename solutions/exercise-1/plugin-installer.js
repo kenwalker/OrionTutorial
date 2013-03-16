@@ -4,7 +4,7 @@
  */
  
 // The following comment tells JSLint which variables are globals thus removing the errors.
-/*global define orion window */
+/*global orion window */
 
 window.onload = function() {
 
