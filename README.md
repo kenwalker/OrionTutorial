@@ -1,6 +1,8 @@
 OrionTutorial
 =============
 
+__Go Away__ - well at least until I'm finished.
+
 This project will contain an ongoing Orion tutorial.
 
 This is work in progress until EclipseCon - I will update this README when this is complete.
