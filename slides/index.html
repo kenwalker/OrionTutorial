@@ -24,10 +24,6 @@
 		<script>
 			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
 		</script>
-
-		<!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
-		<![endif]-->
 	</head>
 
 	<body>
@@ -49,7 +45,7 @@
 				<section>
 					<h2>What are we covering in the tutorial?</h2>
 					<ul>
-						<li>Set-up! Arggg...</li>
+						<li>Set-up!</li>
 						<li>Intro to Orion and then your first Plugin</li>
 						<li>Technical overview of Orion plugins</li>
 						<li>Plugin Writing (including a break)</li>
@@ -94,7 +90,7 @@
 						<li>promotes a page-oriented web experience</li>
 						<li>addresses “core coding” activities and extensions</li>
 						<li>support workflows across a set of linked web pages</li>
-
+					</ul>
 					<aside class="notes">
 						No notes here
 					</aside>
@@ -104,28 +100,44 @@
 				<section>
 					<section>
 						<h3>Here are some examples of the pages in Orion</h3>
-						<img width="1072" height="829" src="images/Navigator.png" alt="Down arrow">
+						<img width="1072" height="829" src="images/Navigator.png" alt="Down arrow"></img>
 					</section>
 					<section>
 						<h3>Sites Page</h3>
-						<img width="1072" height="829" src="images/Sites.png" alt="Down arrow">
+						<img width="1072" height="829" src="images/Sites.png" alt="Down arrow"></img>
 					</section>
 					<section>
 						<h3>Repositories Page</h3>
-						<img width="1072" height="829" src="images/Repositories.png" alt="Down arrow">
+						<img width="1072" height="829" src="images/Repositories.png" alt="Down arrow"></img>
 					</section>
 					<section>
 						<h3>Shell Page</h3>
-						<img width="1072" height="829" src="images/Shell.png" alt="Down arrow">
+						<img width="1072" height="829" src="images/Shell.png" alt="Down arrow"></img>
 					</section>
 					<section>
 						<h3>Search Page</h3>
-						<img width="1072" height="829" src="images/Search.png" alt="Down arrow">
+						<img width="1072" height="829" src="images/Search.png" alt="Down arrow"></img>
 					</section>
 					<section>
 						<h3>Git Log Page</h3>
-						<img width="1072" height="829" src="images/GitLog.png" alt="Down arrow">
+						<img width="1072" height="829" src="images/GitLog.png" alt="Down arrow"></img>
 					</section>
+				</section>
+
+				<section>
+					<h2>Useful Orion shortcuts?</h2>
+					<p>
+						You can always see the shortcuts available on a page by using Shift+? or if you're in the editor it is Shift+Cmd+? or Shift+Ctrl+? (Mac)
+					</p>
+					<ul>
+						<li>Shift+Ctrl+F (Shift+Cmd+F) - Find file</li>
+						<li>Ctrl+O (Cmd+O) - Toggle Outliner</li>
+						<li>In the Editor....</li>
+						<li>Ctrl+Space - Content assist</li>
+						<li>Ctrl+L (Cmd+L) - Goto Line #</li>
+						<li>Ctrl+. (Cmd+.) - Goto next annotation, handy for this tutorial</li>
+						<li>Ctrl+/ (Cmd+/) - Toggle line comments, also handy for the tutorial</li>
+					</ul>
 				</section>
 
 				<section>
@@ -153,6 +165,64 @@
 						<li>Select plugin-installer.html in the <a href="http://localhost:8080/navigate/table.html#/file/tutorial/OrionTutorial/exercises/exercise-1/?depth=1">Exercise 1</a> directory</li>
 						<li>Then choose the menu item Action->(whatever name you gave your command)</li>
 						<li>The settings page should open with your filename filled in as the plugin to install</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>More about plugins....</h2>
+					<ul>
+						<li>Plugins are just HTML pages that follow a communication protocol</li>
+						<li>Advertises “cacheable” capabilities/properties using window.postMessage</li>
+						<li>Allows cross-origin communication and independent implementation</li>
+						<li>Uses <a href="https://developer.mozilla.org/en-US/docs/DOM/The_structured_clone_algorithm">Structured Clone Algorithm</a> to support binary data exchange</li>
+					</ul>
+				</section>
+				
+				<section>
+					<h2>What type of plugins are there?</h2>
+					<ul>
+						<li>Application Linking (URI Templates / Hyperlinks)
+							<ul><li>Link from <a href="http://localhost:8080/edit/edit.html#/file/tutorial/OrionTutorial/slides/index.html,find=navigator%20to%20editor,atLine=185">Navigator to Editor</a> without hard-coding</li></ul></li>
+						<li>Metadata (Name / Value pairs)
+							<ul><li>Action Labels, Cache information, Filters</li></ul></li>
+						<li>Service Provider (JSON-RPC variant / binary support)
+							<ul><li>File Content, Editor Outline, Editor Actions</li></ul></li>
+					</ul>
+				</section>
+				
+				<section>
+					<h2>On to more exercises....</h2>
+				</section>
+				
+				<section data-markdown>
+					## Markdown in a nutshell
+				
+					* Markdown is intended to be as easy-to-read and easy-to-write as possible
+					* A Markdown-formatted document should be publishable as-is, as plain text, and can be read without looking like it’s been marked up with tags or formatting instructions
+					* Markdown uses punctuation characters, carefully chosen so as to look like what they mean. e.g., asterisks around a word actually look like *emphasis*, markdown lists look like lists, etc
+					* Markdown can be easily converted to structurally valid XHTML (or HTML)
+					* The single biggest source of inspiration for Markdown’s syntax is the format of plain text email
+					* *This is actual markup inside reveal.js*!
+				</section>
+				
+				<section>
+					<h3>So let's add a bit of Markown support to Orion</h3>
+					<ol>
+						<li>Let Orion know about the content type (text/x-web-markdown)</li>
+						<li>Add an editor action (button) for Markdown lists</li>
+						<li>Some simple content assist for Markdown</li>
+						<li>Add some simple syntax highlighting by using a grammar</li>
+					</o	l>
+				</section>
+				
+				<section>
+					<h3>Adding content type support for Markdown</h3>
+					<ul>
+						<li>Navigate to the <a href="http://localhost:8080/navigate/table.html#/file/tutorial/OrionTutorial/exercises/exercise-2/?depth=1">Exercise 2</a> directory</li>
+						<li>You can see the .md file and edit it but it's not very interesting</li>
+						<li>Select the markdownPlugin.html file and use your exercise 1 plugin to install it</li>
+						<li>Refresh the page and you should have a <img src="http://localhost:8080/file/tutorial/OrionTutorial/solutions/exercise-2/lib/MarkdownSolid.png"> Markdown icon in the navigator</li>
+						<li>Let's <a href="http://localhost:8080/edit/edit.html#/file/tutorial/OrionTutorial/exercises/exercise-2/markdownPlugin.js#,line=30">edit the plugin</a> and look at how that is done</li>
 					</ul>
 				</section>
 
