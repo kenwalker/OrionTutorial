@@ -1,7 +1,7 @@
 OrionTutorial
 =============
 
-__Go Away__ - well at least until I'm finished.
+__Go Away__ - well at least until We're finished.
 
 This project will contain an ongoing Orion tutorial.
 
