@@ -1,0 +1,38 @@
+=============  HTML =============
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+//SCRIPT
+</script>
+<style>
+//STYLE
+</style>
+</head>
+<body>
+
+<h1>My First JavaScript</h1>
+<p id="demo">This is a paragraph.</p>
+
+<button type="button" onclick="displayDate()">Display Date</button>
+
+</body>
+</html> 
+=================================
+
+============== JS ===============
+function displayDate()
+{
+	document.getElementById("demo").innerHTML=Date();
+}
+=================================
+
+============= CSS ===============
+h1 {
+	background-color: #FF6600;
+}
+
+#demo {
+	padding:25px;
+}
+=================================
