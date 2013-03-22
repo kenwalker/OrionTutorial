@@ -282,7 +282,7 @@
 				</section>
 
 				<section>
-					<h3>Embedding editor into an HTML site</h3>
+					<h3>Embedding the editor</h3>
 					<p>The Orion Editor is made up of a number of different parts.</p>
 					<ul>
 						<li>TextView and supporting base classes</li>
@@ -296,28 +296,60 @@
 					</ul>
 				</section>
 				
-				 <section>
-        		    <section><h3>Orion Standalone Build</h3>
-						<p>The editor standalone build puts together a set of classes that are useful for most Web editing needs.</p>
-						 <ul>
-							<li>2 types of builds: one for users of RequireJS and one for users who want to embed the editor without any other dependencies.</li>
-							<li>The builds are identical in functionality and are available both minified and non-minified.</li>
-							<li></li>
-						</ul>
-        		    </section>
-            		<section>Vertical Slide 2
+			
+    		    <section><h3>Orion Standalone Build</h3>
+					<p>The editor standalone build puts together a set of classes that are useful for most Web editing needs.</p>
+					 <ul>
+						<li>2 types of builds: one for users of RequireJS and one for users who want to embed the editor without any other dependencies.</li>
+						<li>The builds are identical in functionality and are available both minified and non-minified.</li>
+						<li></li>
+					</ul>
+    		    </section>
             		
-            		</section>
-					<section>
-						<h3>Orion Standalone Build</h3>
-						<p>The editor standalone build puts together a set of classes that are useful for most Web editing needs.</p>
-						<ul>
-							<li>Includes: JS/CSS/HTML Syntax Highlighting, Basic Content Assist, etc.  (all the stuff from the previous slide)</li>
-							<li>Doesn't Include: Linters (for JS/CSS/HTML - no errors/warnings), AST based content assist (esprima), other language support (investigating this)</li>
-						</ul>
-						<p>Two types of build are available: RequireJS and Almond</p>
-					</section>
-        		</section>
+				<section>
+					<h3>Orion Standalone Build</h3>
+					<p>The editor standalone build puts together a set of classes that are useful for most Web editing needs.</p>
+					<ul>
+						<li>Includes: JS/CSS/HTML Syntax Highlighting, Basic Content Assist, etc.  (all the stuff from the previous slide)</li>
+						<li>Doesn't Include: Linters (for JS/CSS/HTML - no errors/warnings), AST based content assist (esprima), other language support (investigating this)</li>
+					</ul>
+				</section>
+        		
+        		   <section>
+        		   		<h3>Much easier to embed the editor everywhere</h3>
+        		   		<h2>Webpages!</h2>
+        		   </section>
+        		   <section>
+        		   		<h2>Blogs!</h2>
+        		   </section>
+        		   
+   	 				<section>
+        		   		<h2>Even this presentation!</h2>
+        		   			<pre class="editor" data-editor-lang="js" data-editor-theme="http://eclipse.org/orion/editor/releases/3.0/themes/nimbus.css" style="height:400px">
+function linkify( selector ) {
+  if( supports3DTransforms ) {
+
+    var nodes = document.querySelectorAll( selector );
+
+    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
+      var node = nodes[i];
+
+      if( !node.className ) ) {
+        node.className += ' roll';
+      }
+    };
+  }
+}
+</pre>
+        		   </section>
+        		   
+        		   <section>
+					<h3>Embedding editor into an HTML site</h3>
+					<p>So our first task is to embed the editor into an existing webpage.</p>
+					<ul>
+						<li></li>
+					</ul>
+				</section>
 
 				<section>
 					<h1>A JS Fiddle like Orion plugin using the text editor</h2>
@@ -353,9 +385,16 @@
 					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
 					{ src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					//{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
 					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'js/built-editor.min.js', async: true, callback: function() {require(["orion/editor/edit"], function(edit) {
+								editor = edit({className: "editor"});
+								document.addEventListener("transitionend", function(){editor[0].getTextView().update(true);});
+								document.addEventListener("webkitTransitionEnd", function(){editor[0].getTextView().update(true);});
+							});}
+					} 
+					
 					// { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
 					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
 				]
