@@ -1,0 +1,196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0025)http://eclipse.org/orion/ -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" class="wf-muli-i4-active wf-muli-n4-active wf-active"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<script type="text/javascript" async="" src="./Orion_files/ga.js"></script><script src="./Orion_files/jquery.min.js"></script>
+		<script src="./Orion_files/jquery.easing.js"></script>
+		<script src="./Orion_files/jquery.slidorion.min.js"></script>
+		<link rel="stylesheet" href="./Orion_files/d.css"><script src="./Orion_files/muli.js"></script>
+		<title>Orion</title>
+		
+		<link rel="stylesheet" href="./Orion_files/slidorion.css">
+		<link rel="stylesheet" href="./Orion_files/orionhub.css">
+		<!-- Orion Tutorial Exercise 3 START -->
+		<link rel="stylesheet" type="text/css" href="./Orion_files/built-editor.css"/>
+		<script src="./Orion_files/require.js"></script>
+		<script>
+			require(["./Orion_files/built-editor-amd.min.js"], function(edit) {
+				edit({className: "editor"});
+			});
+		</script>
+		<!-- Orion Tutorial Exercise 3 END -->
+	</head>
+<body>
+
+<nav id="main-nav" class="orion-main">
+  <div class="orion-container" id="nav-wrapper">
+    <a href="http://eclipse.org/orion" class="orion-logo" alt="top" id="simple-logo" style="cursor: pointer; "></a>
+    <span class="orion-slogan">Open Source Platform For Cloud Based Development</span>
+    <ul>
+      <span class="main">
+        <li id="about-nav-btn"><a class="nav-btn" id="about" alt="about" href="http://eclipse.org/#about" style="cursor: pointer; ">About</a></li>
+        <li class="signup" id="signup-nav-btn">
+          <a class="nav-btn signup-txt" id="start" href="http://eclipse.org/#start" style="cursor: pointer; ">
+            <span class="mobile-hide">Get Started</span>
+          </a>
+        </li>
+        <!-- Orion Tutorial Exercise 3 START -->	
+        <li id="blog-nav-btn"><a class="nav-btn" id="editcode" alt="editor" href="http://eclipse.org/#edit" style="cursor: pointer; ">Edit Code Here!</a></li>
+   		<!-- Orion Tutorial Exercise 3 END -->
+    
+        <li id="blog-nav-btn"><a class="nav-btn" id="contact" alt="contact" href="http://eclipse.org/#contact" style="cursor: pointer; ">Contact</a></li>
+      </span>
+      <span class="secondary">
+        <li class="signin" id="signin"><a href="http://orionhub.org/" style="cursor: pointer; ">Sign In</a></li>
+      </span>
+    </ul>
+    <div id="nav-arrow" class="" style="left: 45px; "></div>
+  </div>
+  <a href="https://github.com/eclipse/orion.client"><img style="position: absolute; top: 0; right: 0; border: 0;" src="./Orion_files/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
+</nav>
+
+<header>
+   	<div style="height:530px;width:100%;" class="orion-welcome-background">
+   		<a id="aboutlink" href="http://eclipse.org/orion/#about" style="padding-top:120px;">Test Link</a>
+   		<div id="slidorion" style="margin-top:120px;">
+			<div id="slider">
+				<div class="slide" style="z-index: 4; top: 370px; left: 0px; opacity: 1;"><img src="./Orion_files/screenshotsmall.png"></div>
+				<div class="slide" style="z-index: 5; top: 370px; left: 0px; opacity: 1;"><img src="./Orion_files/cloud-logo.png"></div>
+				<div class="slide" style="z-index: 6; top: 0px; left: 0px; opacity: 1;"><img src="./Orion_files/tech.png"></div>
+			</div>
+		
+			<div id="accordion">
+				<div class="link-header">Tools for the web, on the web</div>
+				<div class="link-content" style="display: none;">
+					All you need is a modern web browser, from there you can write code using a great editor, link to a repository, create a site.
+				</div>
+				<div class="link-header">Code Everywhere</div>
+				<div class="link-content" style="display: none;">
+					Develop your software where ever you go. It'll be there, in the cloud, right where you left it. Just login from a web browser on desktop, laptop, tablet, at an airport, on a bus or even in your office.
+				</div>
+				<div class="link-header active">Open Technologies</div>
+				<div class="link-content" style="display: block;">
+					Orion incorporates leading edge client technologies together to make an extensible tooling platform. Others fork components like the editor to create their own tooling solutions.
+				</div>
+			</div>
+		</div>
+   	</div>
+   	<div class="orion-start-background">
+   		<div style="padding:50px;">
+	   		<div class="orion-contact-content">
+	   			<a id="startlink" href="http://eclipse.org/orion/#contact" style="margin-top:20px;padding-top:120px;color:#EEE;font-size:16px;font-weight:bold;text-decoration:none;">Getting Started</a> 			
+	   			<div id="getstartedcontent">
+			<div class="roundedbox">
+				<div class="content">
+					<h3>Sign-Up for OrionHub</h3>
+					<p>OrionHub is our hosted Orion solution created from the components developed in the open. See what Orion is all about.</p>
+					<a href="http://orionhub.org/" class="yellow bold">Sign-Up Today</a>
+				</div>
+				<div class="icon"><a href="http://orionhub.org/" class="yellow bold"><img src="./Orion_files/gshost.png"></a></div>
+			</div>
+			<div class="roundedbox">
+				<div class="icon"><a href="http://wiki.eclipse.org/Orion/How_Tos/Install_Orion_on_Localhost" class="yellow bold"><img src="./Orion_files/gslocal.png"></a></div>
+				<div class="content">
+					<h3>Download and Install Orion on your localhost</h3>
+					<p>Get Orion installed and running on your own machine.</p>
+					<a href="http://wiki.eclipse.org/Orion/How_Tos/Install_Orion_on_Localhost" class="yellow bold">Download Now</a>
+				</div>
+			</div>
+			<div class="roundedbox">
+				<div class="content">
+					<h3>Getting Started with Orion</h3>
+					<p>Check out our Getting Started guide with Orion as we show you our features and functionality.</p>
+					<a href="http://wiki.eclipse.org/Orion/Getting_Started_with_Orion" class="yellow bold">Follow Along</a>
+				</div>
+				<div class="icon"><a href="http://wiki.eclipse.org/Orion/Getting_Started_with_Orion" class="yellow bold"><img src="./Orion_files/gsstart.png"></a></div>
+			</div>				
+			<div class="roundedbox">
+				<div class="icon"><a href="http://planetorion.org/news/2013/02/embed-the-latest-orion-editor-in-your-code-in-2-steps/" class="yellow bold"><img src="./Orion_files/gsembed.png"></a></div>
+				<div class="content">
+					<h3>Embed Orion into your Application</h3>
+					<p>You can embed the Orion Editor into your application or website</p>
+					<a href="http://planetorion.org/news/2013/02/embed-the-latest-orion-editor-in-your-code-in-2-steps/" class="yellow bold">Find Out How</a>
+				</div>
+				
+			</div>						
+		</div>
+	   		
+	   		</div>
+   		</div>
+   	</div>
+   	 <!-- Orion Tutorial Exercise 3 START -->
+   	<div id="editlink" style="background:#F9F7F3;height:500px;width:100%;padding-top:120px;">
+   		<div style="padding-left:50px;padding-right:50px;height:500px;">Edit Code Here!
+   			<pre class="editor" data-editor-lang="js" style="height:460px; border: 1px solid #58595b;">
+/*
+* This is an Orion editor sample.
+*/
+function() {
+}
+</pre>
+		</div>
+   	</div>
+   	<!-- Orion Tutorial Exercise 3 END -->
+   	<div style="background:#F9F7F3;height:500px;width:100%;">
+   		<div style="padding:50px;">
+	   		<div class="orion-contact-content">
+	   			<a id="contactlink" href="http://eclipse.org/orion/#contact" style="margin-top:20px;padding-top:120px;color:#58595b;font-size:16px;font-weight:bold;text-decoration:none;">Contact Information</a>
+	   			<!-- div>Contact Information</div -->
+	   			<ol class="orion-ol">
+	   				<li class="orion-li"><a href="https://github.com/eclipse/orion.client"><img src="./Orion_files/github.png" alt="thumbnail"></a><span class="orion-contact">Fork Orion on Github<span></span></span></li>
+					<li class="orion-li"><a href="https://twitter.com/orionhub"><img src="./Orion_files/twitter.png" alt="thumbnail"></a><span class="orion-contact">Follow @orionhub on Twitter<span></span></span></li>
+					<li class="orion-li"><a href="https://plus.google.com/u/1/113529759347248251090/posts"><img src="./Orion_files/gplus.png" alt="thumbnail"></a><span class="orion-contact">Follow Orion on Google Plus<span></span></span></li>
+					<li class="orion-li"><a href="irc://irc.freenode.net/#eclipse-orion"><img src="./Orion_files/irc.png" alt="thumbnail"></a><span class="orion-contact">Chat with Orion developers<span></span></span></li>
+					<li class="orion-li"><a href="https://dev.eclipse.org/mailman/listinfo/orion-dev"><img src="./Orion_files/mail.png" alt="thumbnail"></a><span class="orion-contact">Join the Orion Mailing list<span></span></span></li>
+				</ol>	
+	   			
+	   		</div>
+   		</div>
+   	</div>
+   	<div style="height:500px;background:#F9F7F3;width:100%;">
+   	</div>
+   	</header>
+	<script type="text/javascript">
+	
+		$(document).ready(function(){
+			$('#slidorion').slidorion({
+				speed: 500,
+				interval: 10000,
+				effect: 'slideDown'
+			});
+		});
+	
+		$(function(){
+		
+			$('#about').click(function(){
+  			$('html, body').animate({ scrollTop: $('#aboutlink').offset().top }, 1000);
+   			return false;});
+
+  			$('#start').click(function(){
+  			$('html, body').animate({ scrollTop: $('#startlink').offset().top }, 1000);
+   			return false;});
+   			
+   			<!-- Orion Tutorial Exercise 3 START -->
+   			$('#editcode').click(function(){
+   			console.log("LOG: " + $('#editlink').offset().top );
+  			$('html, body').animate({ scrollTop: $('#editlink').offset().top }, 1000);
+   			return false;});
+   		 	<!-- Orion Tutorial Exercise 3 END -->
+   			
+   			$('#contact').click(function(){
+  			$('html, body').animate({ scrollTop: $('#contactlink').offset().top }, 1000);
+   			return false;});
+		});
+	</script>
+
+	<footer class="orion-container">
+		<ul>
+			<li><a href="http://eclipse.org/">Eclipse Home</a></li>
+			<li><a href="http://eclipse.org/legal/privacy.php">Privacy Policy</a></li>
+			<li><a href="http://eclipse.org/legal/termsofuse.php">Terms of Use</a></li>
+			<li><a href="http://eclipse.org/legal/copyright.php">Copyright Agent</a></li>
+			<li><a href="http://eclipse.org/legal/">Legal</a></li>
+			<li><a href="http://eclipse.org/org/foundation/contact.php">Contact Us</a></li>
+			<li id="copyright">Copyright © 2011,2012 The Eclipse Foundation. All Rights Reserved.</li>
+		</ul>
+    </footer>
+</body></html>
