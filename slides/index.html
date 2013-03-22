@@ -96,7 +96,6 @@
 					</aside>
 				</section>
 
-				<!-- Example of nested vertical slides -->
 				<section>
 					<section>
 						<h3>Here are some examples of the pages in Orion</h3>
@@ -237,17 +236,44 @@
 
 				<section>
 					<h3>2) Add an editor action (button) for Markdown lists</h3>
-					<p>(not done)</p>
+					<p>
+						Markdown lists start with a * so lets make an Orion editor button to convert to and from
+						Markdown list format.
+					</p>
+					<ul>
+						<li>Let's <a href="http://localhost:8080/edit/edit.html#/file/tutorial/OrionTutorial/exercises/exercise-2/markdownPlugin.js#,line=41">edit the plugin</a> again</li>
+						<li>You should highlight all the commented out code in section TWO and press Ctrl+/ (Cmd+/ on Mac)</li>
+						<li>If you save you should see errors, that's where you want to look</li>
+						<li>Review our reference doc for <a href="http://localhost:8080/help/index.jsp?topic=%2Forg.eclipse.orion.doc.isv%2FWikiDoc%2FOrion%2FDocumentation%2FDeveloper_Guide%2FPlugging_into_the_editor%2Forion-edit-command.html&cp=1_0_7_1">orion.edit.command</a> to see what to fill in</li>						
+					</ul>
 				</section>
 
 				<section>
 					<h3>3) Some simple content assist for Markdown</h3>
-					<p>(not done)</p>
+					<p>
+						We'll provide some simple content assist.  If the buffer is empty, provide a default Markdown
+						file.  Also provide some other proposals.
+					</p>
+					<ul>
+						<li>Let's <a href="http://localhost:8080/edit/edit.html#/file/tutorial/OrionTutorial/exercises/exercise-2/markdownPlugin.js#,line=41">edit the plugin</a> again</li>
+						<li>You should highlight all the commented out code in section THREE and press Ctrl+/ (Cmd+/ on Mac) the Save</li>
+						<li>Look at the TODOs</li>
+						<li>One is to figure out a new proposal, the second is to be smart about where to put the cursor after inserting
+						<li>Review our reference doc for <a href="http://localhost:8080/help/index.jsp?topic=%2Forg.eclipse.orion.doc.isv%2FWikiDoc%2FOrion%2FDocumentation%2FDeveloper_Guide%2FPlugging_into_the_editor%2Forion-edit-contentAssist.html&cp=1_0_7_2">orion.edit.contentAssist</a></li>
+					</ul>
 				</section>
 
 				<section>
 					<h3>4) Add some simple syntax highlighting by using a grammar</h3>
-					<p>(not done)</p>
+					<p>
+						There are two ways of doing syntax highlighting. The easiest is using a Grammar.
+					</p>
+					<ul>
+						<li>Let's <a href="http://localhost:8080/edit/edit.html#/file/tutorial/OrionTutorial/exercises/exercise-2/markdownPlugin.js#,line=146">edit the plugin</a> again</li>
+						<li>You should highlight all the commented out code in section FOUR and press Ctrl+/ (Cmd+/ on Mac) the Save</li>
+						<li>You don't have to code anything but look at how the grammar is constructed and plugged in</li>
+						<li>Review our reference doc for <a href="http://localhost:8080/help/index.jsp?topic=%2Forg.eclipse.orion.doc.isv%2FWikiDoc%2FOrion%2FDocumentation%2FDeveloper_Guide%2FPlugging_into_the_editor%2Forion-edit-highlighter.html&cp=1_0_7_4">orion.edit.highlighter</a></li>
+					</ul>
 				</section>
 
 				<section>
