@@ -283,8 +283,41 @@
 
 				<section>
 					<h3>Embedding editor into an HTML site</h3>
-					<p>Bogdan - not done</p>
+					<p>The Orion Editor is made up of a number of different parts.</p>
+					<ul>
+						<li>TextView and supporting base classes</li>
+						<li>Events and Keybinding handling</li>
+						<li>Rulers and Annotations</li>
+						<li>DND and Tooltips</li>
+						<li>Undo stack</li>
+						<li>Content Assist and Syntax Hilighting</li>
+						<li>Theme support</li>
+						<li>Editor and Editor Features</li>
+					</ul>
 				</section>
+				
+				 <section>
+        		    <section><h3>Orion Standalone Build</h3>
+						<p>The editor standalone build puts together a set of classes that are useful for most Web editing needs.</p>
+						 <ul>
+							<li>2 types of builds: one for users of RequireJS and one for users who want to embed the editor without any other dependencies.</li>
+							<li>The builds are identical in functionality and are available both minified and non-minified.</li>
+							<li></li>
+						</ul>
+        		    </section>
+            		<section>Vertical Slide 2
+            		
+            		</section>
+					<section>
+						<h3>Orion Standalone Build</h3>
+						<p>The editor standalone build puts together a set of classes that are useful for most Web editing needs.</p>
+						<ul>
+							<li>Includes: JS/CSS/HTML Syntax Highlighting, Basic Content Assist, etc.  (all the stuff from the previous slide)</li>
+							<li>Doesn't Include: Linters (for JS/CSS/HTML - no errors/warnings), AST based content assist (esprima), other language support (investigating this)</li>
+						</ul>
+						<p>Two types of build are available: RequireJS and Almond</p>
+					</section>
+        		</section>
 
 				<section>
 					<h1>A JS Fiddle like Orion plugin using the text editor</h2>
