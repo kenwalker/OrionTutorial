@@ -354,17 +354,62 @@ function linkify( selector ) {
         		   
         		   <section>
 					<h3>Embedding editor into an HTML site</h3>
-					<p>So our first task is to embed the editor into an existing webpage.</p>
+					<p>The mission: use the editor build to embed the editor into an existing webpage. Here are the steps:</p>
 					<ul>
-						<li></li>
+						<li>Get the initial webpage content from exercise from <a href="">here</a></li>
+						<li>Create a site to serve your webpage</li>
+						<li>Add a link to the nav section of the page: "Edit Code Here!"</li>
+						<li>Add the RequireJS code needed to load the AMD build. Doc is available <a href="">here</a>.</li>
+						<li>Add a div to contain the editor. This should come right after the "Embed Orion into your Application" section and before the <a href="">Contact Info</a> section.</li>
+						<li>Create a pre within the div to host the code you want shown in the editor.</li>
+						<li>(BONUS) Add some code to animate the scrolling from the top link to the editor.</li>
 					</ul>
 				</section>
 
+				 <section>
+					<h3>Playing around with the various editor build configuration options</h3>
+					<ul>
+					<li>Now that the editor is safely embedded in the page, let's look at some of the configuration options available.</li>
+					<li>The full list is available in <a href="">JSDoc of edit.js</a>.</li>
+					<li>To use these, add "data-editor-" to option name and add it to the editor pre.</li>
+					<li>For properties that are camel cased, separate the words and add a dash.</li>
+					<li>Ex: fullSelection becomes <br><code>data-editor-full-selection="false"</code></li>
+				</ul>
+				</section>
+				
+				 <section>
+					<h3>Here are some properties to play around with:</h3>
+							<ul>
+							<li>readonly - whether the view is readonly</li>
+							<li>fullSelection - whether the view is in full selection mode</li>
+							<li>tabSize - number of spaces in a tab</li>
+							<li>tabMode - whether the tab keypress is consumed by the view or is used for focus traversal.</li>
+							<li>wrapMode - whether the view wraps lines.</li>
+							<li>lang - the styler language. Plain text by default</li>
+							<li>showLinesRuler - whether the lines ruler is shown</li>
+							<li>showAnnotationRuler - whether the annotation ruler is shown</li>
+							<li>showOverviewRuler - whether the overview ruler is shown</li>
+							<li>showFoldingRuler - whether the folding ruler is shown</li>
+						</ul>
+				</section>
+				
 				<section>
-					<h1>A JS Fiddle like Orion plugin using the text editor</h2>
-					<p>Bogdan - not done</p>
+					<h1>Orion Snippet Editor</h1>
+					<p>The mission: use the editor build to create a JS Fiddle like Orion plugin. Here are the steps:</p>
+				
 				</section>
 
+				<section>
+					<h3>Themes!</h3>
+					<p>The Orion editor is also capable of being themed.</p>
+				
+				</section>
+				
+				<section>
+					<h3>Create a plugin to integrate the snippet editor into Orion</h3>
+					<p>The mission: use the editor build to embed the editor into an existing webpage. Here are the steps:</p>
+				
+				</section>
 				<section>
 					<h1>End</h2>
 					<p></p>
@@ -387,7 +432,7 @@ function linkify( selector ) {
 				center: true,
 
 				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'fade', // default/cube/page/concave/zoom/linear/fade/none
+				transition: Reveal.getQueryHash().transition || 'cube', // default/cube/page/concave/zoom/linear/fade/none
 
 				// Optional libraries used to extend on reveal.js
 				dependencies: [
