@@ -332,9 +332,9 @@
         		   		<h2>Blogs!</h2>
         		   </section>
         		   
-   	 				<section>
+   	 				<section data-state="startOrion">
         		   		<h2>Even this presentation!</h2>
-        		   			<pre class="editor" data-editor-lang="js" data-editor-theme="http://eclipse.org/orion/editor/releases/3.0/themes/nimbus.css" style="height:400px">
+        		   			<pre class="editor" data-editor-lang="js" data-editor-theme="./css/nimbus.css" style="height:400px">
 function linkify( selector ) {
   if( supports3DTransforms ) {
 
@@ -396,7 +396,14 @@ function linkify( selector ) {
 				<section>
 					<h1>Orion Snippet Editor</h1>
 					<p>The mission: use the editor build to create a JS Fiddle like Orion plugin. Here are the steps:</p>
-				
+						<ul>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						</ul>
 				</section>
 
 				<section>
@@ -422,7 +429,7 @@ function linkify( selector ) {
 		<script src="js/reveal.min.js"></script>
 
 		<script>
-
+		
 			// Full list of configuration options available here:
 			// https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
@@ -432,7 +439,7 @@ function linkify( selector ) {
 				center: true,
 
 				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'cube', // default/cube/page/concave/zoom/linear/fade/none
+				transition: Reveal.getQueryHash().transition || 'fade', // default/cube/page/concave/zoom/linear/fade/none
 
 				// Optional libraries used to extend on reveal.js
 				dependencies: [
@@ -453,7 +460,6 @@ function linkify( selector ) {
 					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
 				]
 			});
-
 		</script>
 
 	</body>
