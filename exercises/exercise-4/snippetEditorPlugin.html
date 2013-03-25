@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Snippet Editor Plugin</title>
+  <script src="./snippet_files/plugin.js"></script>
+  <script type="text/javascript">
+	/*global window orion */
+	window.onload = function() {
+		var headers = {
+			name: "Snippet Editor Page Service",
+			version: "1.0",
+			description: "This plugin integrates access to the snippet editor into other Orion pages."
+		};
+	
+		var provider = new orion.PluginProvider(headers);
+	
+		provider.registerService("orion.page.link", {}, {
+			name: "Snippet Editor",
+			id: "orion.snippet",
+			uriTemplate: "{OrionHome}/exercise-4/snippeteditor.html"
+		});
+		provider.connect();
+	};
+	</script>
+</head>
+<body></body>
+</html>

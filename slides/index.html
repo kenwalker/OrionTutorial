@@ -302,7 +302,7 @@
 					 <ul>
 						<li>2 types of builds: one for users of RequireJS and one for users who want to embed the editor without any other dependencies.</li>
 						<li>The builds are identical in functionality and are available both minified and non-minified.</li>
-						<li></li>
+						<li>Built regularly as part of the overall Orion build</li>
 					</ul>
     		    </section>
             		
@@ -356,11 +356,11 @@ function linkify( selector ) {
 					<h3>Embedding editor into an HTML site</h3>
 					<p>The mission: use the editor build to embed the editor into an existing webpage. Here are the steps:</p>
 					<ul>
-						<li>Get the initial webpage content from exercise from <a href="">here</a></li>
+						<li>Get the initial webpage content from orion.html in exercise 3.</li>
 						<li>Create a site to serve your webpage</li>
 						<li>Add a link to the nav section of the page: "Edit Code Here!"</li>
-						<li>Add the RequireJS code needed to load the AMD build. Doc is available <a href="">here</a>.</li>
-						<li>Add a div to contain the editor. This should come right after the "Embed Orion into your Application" section and before the <a href="">Contact Info</a> section.</li>
+						<li>Add the RequireJS code needed to load the AMD build. Doc is available <a href="http://wiki.eclipse.org/Orion/How_Tos/Editor_Build">here</a>.</li>
+						<li>Add a div to contain the editor. This should come right after the "Embed Orion into your Application" section and before the Contact Info section.</li>
 						<li>Create a pre within the div to host the code you want shown in the editor.</li>
 						<li>(BONUS) Add some code to animate the scrolling from the top link to the editor.</li>
 					</ul>
@@ -370,7 +370,7 @@ function linkify( selector ) {
 					<h3>Playing around with the various editor build configuration options</h3>
 					<ul>
 					<li>Now that the editor is safely embedded in the page, let's look at some of the configuration options available.</li>
-					<li>The full list is available in <a href="">JSDoc of edit.js</a>.</li>
+					<li>The full list is available in the <a href="http://git.eclipse.org/c/orion/org.eclipse.orion.client.git/tree/bundles/org.eclipse.orion.client.editor/web/orion/editor/edit.js">JSDoc of edit.js</a>.</li>
 					<li>To use these, add "data-editor-" to option name and add it to the editor pre.</li>
 					<li>For properties that are camel cased, separate the words and add a dash.</li>
 					<li>Ex: fullSelection becomes <br><code>data-editor-full-selection="false"</code></li>
@@ -394,28 +394,56 @@ function linkify( selector ) {
 				</section>
 				
 				<section>
-					<h1>Orion Snippet Editor</h1>
+					<h3>Orion Snippet Editor</h3>
 					<p>The mission: use the editor build to create a JS Fiddle like Orion plugin. Here are the steps:</p>
 						<ul>
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
+						<li>Take the skeleton HTML and create the divs needed to host 4 editors</li>
+						<li>Give 3 of the divs HTML, CSS and JS unique IDs and set the editor language attributes</li>
+						<li>Add an iframe to hold the final results</li>
+						<li>Add Run, Save and Load buttons at the top of the page</li>
+						<li>Add the save field next to the Run</li>
+						<li>Write some initial JS to create the editors</li>
+						<li>Fill out the runSnippet function and hook up the Run button</li>
+						<li>Fill out the saveSnippet function and hook up the Save button</li>
+						<li>Fill out the loadSnippet function and hook up the Load button</li>
 						</ul>
 				</section>
 
 				<section>
 					<h3>Themes!</h3>
 					<p>The Orion editor is also capable of being themed.</p>
+					<ul>
+					<li>Number of themes exisit for the editor in Orion.</li>
+					<li>To see an exhaustive list of styling possibilites, check out <a href="../solutions/exercise-4/snippet_files/built-editor.css">built-editor.css</a></li>
+					<li>The Orion editor themes use a smaller subset of the styling possibilities for now</li>
+					<li>To set a theme on a class, add the <code>data-editor-theme</code> attribute to the div.</li>
+					</ul>
 				
+				</section>
+				
+					<section>
+					<p>Some themes to try:</p>
+					<ul>
+					<li>/exercise-4/snippet_files/themes/adelante.css</li>
+					<li>/exercise-4/snippet_files/themes/ambience.css</li>
+					<li>/exercise-4/snippet_files/themes/blue.css</li>
+					<li>/exercise-4/snippet_files/themes/eclipse.css</li>
+					<li>/exercise-4/snippet_files/themes/nimbus.css</li>
+					<li>/exercise-4/snippet_files/themes/prospecto.css</li>
+					<li>/exercise-4/snippet_files/themes/raspberrypi.css</li>
+					<li>/exercise-4/snippet_files/themes/tierra.css</li>
+					</ul>
+					<p>Pick 3 themes you like to help differentiate the editors (if you don't like any of them, feel free to hack them).</p>
 				</section>
 				
 				<section>
 					<h3>Create a plugin to integrate the snippet editor into Orion</h3>
-					<p>The mission: use the editor build to embed the editor into an existing webpage. Here are the steps:</p>
-				
+					<p>The (secret) mission: Using your knowledge of plugins, use orion.page.link to add your SnippetEditor to the Orion site. Here are the steps:</p>
+					<ul>
+					<li>Create a plugin template (plugin.is in the snippet_files folder).</li>
+					<li>Register the orion.page.link service and your snippetEditor.html as the URI template.</li>
+					<li>Install the plugin into Orion.</li>
+					</ul>
 				</section>
 				<section>
 					<h1>End</h2>

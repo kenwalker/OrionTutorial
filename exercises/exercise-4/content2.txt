@@ -1,0 +1,62 @@
+=============  HTML =============
+<!DOCTYPE html>
+<!--
+ Sample that shows how to use the edit.js file to create an editor.  For a complete list
+ of editor configuration options, see orion.editor#edit.
+-->
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="./snippet_files/built-editor.css"/>
+<style>
+//STYLE
+</style>
+<!-- Note if running this standalone you will need to copy requirejs from bundles/org.eclipse.orion.client.core/web/ -->
+<script src="./snippet_files/require.js"></script>
+<script>
+//SCRIPT
+</script>
+</head>
+<body>
+<div id="editor"><pre>/*
+ * This is a orion editor sample.
+ */
+function () {
+	var a = 'hi there!';
+}</pre></div>
+</body>
+</html>
+=================================
+
+============== JS ===============
+	/*globals require*/
+	require({
+		baseUrl: '.',
+		paths: {
+			i18n: 'snippet_files/i18n'
+		}
+	});
+	require(["snippet_files/built-editor-amd.min.js"], function(edit) {
+		edit({
+			lang: "js",
+			theme: "/exercise-4/snippet_files/themes/nimbus.css"
+		});
+	});
+=================================
+
+============= CSS ===============
+#editor {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	bottom: 0px;
+	right: 0px;
+	margin: 0px;
+}
+
+pre {
+	margin-top: 0px;
+}
+body {
+	margin: 0px;
+}
+=================================
