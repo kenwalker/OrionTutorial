@@ -13,14 +13,7 @@
 			description: "This plugin integrates access to the snippet editor into other Orion pages."
 		};
 	
-		var provider = new orion.PluginProvider(headers);
-	
-		provider.registerService("orion.page.link", {}, {
-			name: "Snippet Editor",
-			id: "orion.snippet",
-			uriTemplate: "{OrionHome}/exercise-4/snippeteditor.html"
-		});
-		provider.connect();
+		//registerService for orion.page.link
 	};
 	</script>
 </head>

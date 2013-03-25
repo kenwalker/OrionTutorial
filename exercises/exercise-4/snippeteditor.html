@@ -3,51 +3,11 @@
 <head>
 <meta charset="UTF-8" />
 <title>Snippet Editor</title>
-<link rel="stylesheet" type="text/css" href="./snippet_files/built-editor.css"/>
-<script src="./snippet_files/require.js"></script>
-<script>
-	/*globals require*/
-	require({
-	  baseUrl: '.',
-	  paths: {
-		  text: 'snippet_files/text',
-		  i18n: 'snippet_files/i18n'
-	  }
-	});
-	
-	require(["snippeteditor"]);
-</script>
+<!-- INSERT CODE TO GET require + snippeteditor -->
 </head>
 <body>
-<button id="runSnippet">Run</button>
-<input type="text" id="nameSnippet">
-<button id="saveSnippet">Save</button>
-<button id="loadSnippet">Load</button>
-<!--
-	Themes to play around with:
-	data-editor-theme=
-	/exercise-4/snippet_files/themes/adelante.css
-	/exercise-4/snippet_files/themes/ambience.css
-	/exercise-4/snippet_files/themes/blue.css
-	/exercise-4/snippet_files/themes/eclipse.css
-	/exercise-4/snippet_files/themes/nimbus.css
-	/exercise-4/snippet_files/themes/prospecto.css
-	/exercise-4/snippet_files/themes/raspberrypi.css
-	/exercise-4/snippet_files/themes/tierra.css
--->
-<div style="padding:2px; width:100%;height:500px;">
-	<div style="width:45px;position:absolute;margin-left:45%;margin-top:480px;z-index:200;background-color: InfoBackground; opacity:0.6;">HTML</div>
-	<div id="htmlEditor" data-editor-lang="html" data-editor-theme="/snippet_files/themes/blue.css" style="width:50%; height:100%;float:left; border: black solid 1px;"></div>
-	<div style="width:45px;position:absolute;margin-left:95%;margin-top:480px;z-index:200;background-color: InfoBackground; opacity:0.6;">JS</div>
-	<div id="jsEditor"  data-editor-lang="js" data-editor-theme="/exercise-4/snippet_files/themes/tierra.css" style="width:49%; height:100%;float:right; border: black solid 1px;"></div>
-</div>
-<div style="padding:2px;width:100%;height:500px;">
-	<div style="width:45px;position:absolute;margin-left:45%;margin-top:480px;z-index:200;background-color: InfoBackground; opacity:0.6;">CSS</div>
-	<div id="cssEditor" data-editor-lang="css" data-editor-theme="/exercise-4/snippet_files/themes/raspberrypi.css" style="width:50%; height:100%;float:left; border: black solid 1px;"></div>
-	<div style="width:49%; height:100%;float:right; border: black solid 1px;">
-		<iframe id="output" style="width:100%;height:100%;" frameborder="0"> 
-		</iframe>
-	</div>
-</div>
+<!-- INSERT CODE FOR BUTTONS-->
+
+<!-- INSERT CODE FOR DIVS -->
 </body>
 </html>

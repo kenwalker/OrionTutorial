@@ -10,21 +10,6 @@
 		<link rel="stylesheet" href="./Orion_files/slidorion.css">
 		<link rel="stylesheet" href="./Orion_files/orionhub.css">
 		<!-- Orion Tutorial Exercise 3 START -->
-		<link rel="stylesheet" type="text/css" href="./Orion_files/built-editor.css"/>
-		<script src="./Orion_files/require.js"></script>
-		<script>
-			/*globals require*/
-			require({
-			  baseUrl: '.',
-			  paths: {
-				  text: 'Orion_files/text',
-				  i18n: 'Orion_files/i18n',
-			  }
-			});
-			require(["./Orion_files/built-editor-amd.min.js"], function(edit) {
-				edit({className: "editor"});
-			});
-		</script>
 		<!-- Orion Tutorial Exercise 3 END -->
 	</head>
 <body>
@@ -42,7 +27,6 @@
           </a>
         </li>
         <!-- Orion Tutorial Exercise 3 START -->	
-        <li id="blog-nav-btn"><a class="nav-btn" id="editcode" alt="editor" href="http://eclipse.org/#edit" style="cursor: pointer; ">Edit Code Here!</a></li>
    		<!-- Orion Tutorial Exercise 3 END -->
     
         <li id="blog-nav-btn"><a class="nav-btn" id="contact" alt="contact" href="http://eclipse.org/#contact" style="cursor: pointer; ">Contact</a></li>
@@ -126,44 +110,6 @@
    		</div>
    	</div>
    	 <!-- Orion Tutorial Exercise 3 START -->
-   	<div id="editlink" style="background:#F9F7F3;height:500px;width:100%;padding-top:120px;">
-   		<div style="padding-left:50px;padding-right:50px;height:500px;">Edit Code Here!
-   			<!--
-   			Some config options to try:
-   			
-   				data-editor-readonly="true"
-   				data-editor-full-selection="false"
-   				data-editor-tab-size=10;
-   				data-editor-tab-mode=false;
-   				data-editor-wrap-mode="true"
-   				data-editor-lang="html" //or js or css
-   				data-editor-show-lines-ruler="false"
-   				data-editor-show-annotation-ruler="false"
-   				data-editor-show-overview-ruler="false"
-   				data-editor-show-folding-ruler="false"
-
-				* @property {Boolean} [readonly=false] whether or not the view is read-only.
-				* @property {Boolean} [fullSelection=true] whether or not the view is in full selection mode.
-				* @property {Number} [tabSize=4] The number of spaces in a tab.
-				* @property {Boolean} [tabMode=true] whether or not the tab keypress is consumed by the view or is used for focus traversal.
-				* @property {Boolean} [wrapMode=false] whether or not the view wraps lines.
-				* @property {String} [title=""] the editor title.
-				* @property {String} [contents=""] the editor contents.
-				* @property {String} [lang] the styler language. Plain text by default.
-				* @property {Boolean} [showLinesRuler=true] whether or not the lines ruler is shown.
-				* @property {Boolean} [showAnnotationRuler=true] whether or not the annotation ruler is shown.
-				* @property {Boolean} [showOverviewRuler=true] whether or not the overview ruler is shown.
-				* @property {Boolean} [showFoldingRuler=true] whether or not the folding ruler is shown.
-   			-->
-   			<pre class="editor" data-editor-lang="js" style="height:460px; border: 1px solid #58595b;">
-/*
-* This is an Orion editor sample.
-*/
-function() {
-}
-</pre>
-		</div>
-   	</div>
    	<!-- Orion Tutorial Exercise 3 END -->
    	<div style="background:#F9F7F3;height:500px;width:100%;">
    		<div style="padding:50px;">
@@ -205,11 +151,7 @@ function() {
    			return false;});
    			
    			<!-- Orion Tutorial Exercise 3 START -->
-   			$('#editcode').click(function(){
-   			console.log("LOG: " + $('#editlink').offset().top );
-  			$('html, body').animate({ scrollTop: $('#editlink').offset().top }, 1000);
-   			return false;});
-   		 	<!-- Orion Tutorial Exercise 3 END -->
+   			<!-- Orion Tutorial Exercise 3 END -->
    			
    			$('#contact').click(function(){
   			$('html, body').animate({ scrollTop: $('#contactlink').offset().top }, 1000);
