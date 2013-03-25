@@ -362,7 +362,7 @@ function linkify( selector ) {
 					<p>The mission: use the editor build to embed the editor into an existing webpage. Here are the steps:</p>
 					<ul>
 						<li>Get the initial webpage content from orion.html in exercise 3.</li>
-						<li>Create a site to serve your webpage</li>
+						<li>You can see the webpage by opening as Raw</li>
 						<li>Add a link to the nav section of the page: "Edit Code Here!"</li>
 						<li>Add the RequireJS code needed to load the AMD build. Doc is available <a href="http://localhost:8080/file/tutorial/OrionTutorial/exercises/exercise-3/Orion_files/embed-editor.pdf">here</a>.</li>
 					</ul>
@@ -497,7 +497,7 @@ function linkify( selector ) {
 					//{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
 					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
 					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
-					{ src: 'js/built-editor.min.js', async: true, callback: function() {require(["orion/editor/edit"], function(edit) {
+					{ src: 'js/built-editor-fix.js', async: true, callback: function() {require(["orion/editor/edit"], function(edit) {
 								editor = edit({className: "editor"});
 								document.addEventListener("transitionend", function(){editor[0].getTextView().update(true);});
 								document.addEventListener("webkitTransitionEnd", function(){editor[0].getTextView().update(true);});
