@@ -31,7 +31,7 @@ window.onload = function() {
     //Smiley face for example - http://fennlibrary.edublogs.org/files/2009/10/smiley-face-icon1.jpg
     provider.registerServiceProvider("orion.file.contenttype", {}, {
         contentTypes: [{
-            id: "text/x-web-markdown",
+            id: "text/x-markdown",
             name: "Markdown",
             extension: ["md", "markdown", "mdown", "mkd", "mkdn"],
             image: "http://localhost:8080/file/tutorial/OrionTutorial/solutions/exercise-2/lib/MarkdownSolid.png"
@@ -140,7 +140,7 @@ window.onload = function() {
 //
 //    provider.registerServiceProvider("orion.edit.contentAssist", contentAssistImpl, {
 //        name: "Markdown content assist",
-//        contentType: ["text/x-web-markdown"]
+//        contentType: ["text/x-markdown"]
 //    });
 //
 //
@@ -188,7 +188,7 @@ window.onload = function() {
 //    // Register the highlighter service. Highlighter services can be a grammar or the more complex highlighter.
 //    provider.registerServiceProvider("orion.edit.highlighter", {}, {
 //        type: "grammar",
-//        contentType: ["text/x-web-markdown"],
+//        contentType: ["text/x-markdown"],
 //        grammar: markdownGrammar
 //    });
 

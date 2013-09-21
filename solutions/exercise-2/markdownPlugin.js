@@ -29,7 +29,7 @@ window.onload = function() {
     // Register the content type for all known extensions and the id for Markdown.
     provider.registerServiceProvider("orion.file.contenttype", {}, {
         contentTypes: [{
-            id: "text/x-web-markdown",
+            id: "text/x-markdown",
             name: "Markdown",
             extension: ["md", "markdown", "mdown", "mkd", "mkdn"],
             image: "http://localhost:8080/file/tutorial/OrionTutorial/solutions/exercise-2/lib/MarkdownSolid.png"
@@ -93,7 +93,7 @@ window.onload = function() {
     var serviceProps = {
         name: "Convert to Markdown List",
         key: ["l", true, true],
-        contentType: ["text/x-web-markdown"]
+        contentType: ["text/x-markdown"]
     };
 
     // Register the editor command
@@ -133,7 +133,7 @@ window.onload = function() {
 
     provider.registerServiceProvider("orion.edit.contentAssist", contentAssistImpl, {
         name: "Markdown content assist",
-        contentType: ["text/x-web-markdown"]
+        contentType: ["text/x-markdown"]
     });
 
 
@@ -181,7 +181,7 @@ window.onload = function() {
     // Register the highlighter service. Highlighter services can be a grammar or the more complex highlighter.
     provider.registerServiceProvider("orion.edit.highlighter", {}, {
         type: "grammar",
-        contentType: ["text/x-web-markdown"],
+        contentType: ["text/x-markdown"],
         grammar: markdownGrammar
     });
 
