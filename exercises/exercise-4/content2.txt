@@ -1,7 +1,7 @@
 =============  HTML =============
 <!DOCTYPE html>
 <!--
- Sample that shows how to use the edit.js file to create an editor.  For a complete list
+ A sample file that shows how to use the edit.js file to create an editor.  For a complete list
  of editor configuration options, see orion.editor#edit.
 -->
 <html>
