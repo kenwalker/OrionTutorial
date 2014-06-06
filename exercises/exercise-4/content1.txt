@@ -11,7 +11,7 @@
 </head>
 <body>
 
-<h1>Some Test JavaScript</h1>
+<h1>Almost Final Test JavaScript</h1>
 <p id="demo">This is a paragraph.</p>
 
 <button type="button" onclick="displayDate()">Display Date</button>
